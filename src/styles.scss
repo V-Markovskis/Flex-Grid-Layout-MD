@@ -1,7 +1,7 @@
 
 .container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 400px);
+  grid-template-columns: repeat(4, minmax(230px, 400px));
   grid-template-rows: repeat(13, 60px);
   grid-auto-rows: auto;
   margin: 100px;
@@ -21,9 +21,9 @@
       "banner-box banner-box banner-box banner-box";
 }
 
-@media (max-width: 1687px) {
+@media (max-width: 1279px) {
   .container-grid {
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, minmax(100px, 300px));
     grid-template-rows: repeat(13, 80px);
     grid-template-areas:
         "header-box header-box header-box"
@@ -46,7 +46,7 @@
   .container-grid {
     
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(13, 100px);
+    grid-template-rows: repeat(13, 80px);
     grid-template-areas: 
         "header-box"
         "menu-box"

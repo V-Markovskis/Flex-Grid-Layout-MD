@@ -1,3 +1,108 @@
-body {
-  background-color: antiquewhite;
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 400px);
+  grid-template-rows: repeat(13, 60px);
+  grid-auto-rows: auto;
+  margin: 100px;
+  grid-template-areas: 
+      "header-box menu-box menu-box menu-box"
+      "hero-box hero-box hero-box hero-box"
+      "hero-box hero-box hero-box hero-box"
+      "hero-box hero-box hero-box hero-box"
+      "hero-box hero-box hero-box hero-box"
+      "hero-box hero-box hero-box hero-box"
+      "hero-box hero-box hero-box hero-box"
+      "main-box main-box BLANK image-box"
+      "main-box main-box BLANK image-box"
+      "main-box main-box BLANK extra-box"
+      "main-box main-box BLANK extra-box"
+      "banner-box banner-box banner-box banner-box"
+      "banner-box banner-box banner-box banner-box";
+}
+
+@media (max-width: 1687px) {
+  .container-grid {
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(13, 80px);
+    grid-template-areas:
+        "header-box header-box header-box"
+        "hero-box hero-box hero-box"
+        "hero-box hero-box hero-box"
+        "hero-box hero-box hero-box"
+        "hero-box hero-box hero-box"
+        "menu-box main-box main-box"
+        "menu-box main-box main-box"
+        "menu-box main-box main-box"
+        "menu-box banner-box banner-box"
+        "menu-box banner-box banner-box"
+        "menu-box extra-box image-box"
+        "menu-box extra-box image-box";
+        
+  }
+}
+
+@media (max-width: 480px) {
+  .container-grid {
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-areas: 
+        "header-box"
+        "menu-box"
+        "menu-box"
+        "hero-box"
+        "hero-box"
+        "hero-box"
+        "main-box"
+        "main-box"
+        "main-box"
+        "banner-box"
+        "extra-box"
+        "image-box";
+  }
+}
+
+.box {
+  border: 1px solid #fff;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-box {
+  grid-area: header-box;
+  background: black;
+}
+
+.menu-box {
+  grid-area: menu-box;
+  background: red;
+}
+
+.hero-box {
+  grid-area: hero-box;
+  background: rgb(64, 64, 231);
+}
+
+.main-box {
+  grid-area: main-box;
+  background: rgb(23, 23, 128)
+}
+
+.image-box {
+  grid-area: image-box;
+  background: rgb(155, 142, 142);
+}
+
+.extra-box {
+  grid-area: extra-box;
+  background: rgb(16, 94, 16);
+}
+
+.banner-box {
+  grid-area: banner-box;
+  background: rgb(180, 180, 19);
 }
